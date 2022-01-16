@@ -3,6 +3,14 @@
   <br>
   Project Antifraud Provider
 </h1>
+<h2> Iniciando o projeto </h2>
+<p>
+  Para rodar o container docker: `npm run start:docker`
+  Antes de executar o serverless-framework possuir ele instalado
+  `npm install -g serverless`
+  Instalar as dependências usar o comando: `npm i` ou `yarn`
+  Para rodar o serverless offline: `npm run start:sls`
+</p>
 
 <p align="justify">
   The <b> Antifraud Provider </b>is a set of definitions to help you integrate your team consume our <b> services of API</b> with maximum agility. 
@@ -80,9 +88,6 @@ A plantaforma de desenvolvimento é em Node.js (Javascript/Typescript).
 </li>
 <li>
   Uso de container <b> Docker </b> para ter o ambiente local pré-configurado similar ao ambiente produtivo.
-
-  comando para criar a imagem: `docker build .`
-  comando para executar o projeto: `docker-compose up`
 </li>
 
 <h2>
