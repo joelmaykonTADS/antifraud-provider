@@ -6,8 +6,8 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "start:docker": "docker-compose up",
-    "start:dev": "clear && sls offline -o 0.0.0.0 -s local",
+    "start:docker": "docker-compose up -d --build",
+    "start:sls": "clear && sls offline -o 0.0.0.0 -s local",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
