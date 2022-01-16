@@ -1,0 +1,17 @@
+service:
+ name: ccb-core
+
+plugins:
+ - 'serverless-plugin-typescript'
+ - serverless-plugin-optimize
+ - serverless-offline
+
+provider:
+ name: aws
+ runtime: nodejs12.x
+
+custom:
+  funcDir: src/4-framework/functions
+
+functions:
+  - ${file(${self:custom.funcDir}/_handlers.yml)}
