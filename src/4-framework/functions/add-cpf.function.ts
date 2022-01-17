@@ -3,12 +3,13 @@ import { Handler, Context } from 'aws-lambda';
 import { proxy } from 'aws-serverless-express';
 import { bootstrapServer } from '../infrastructure/server';
 import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
 import { AddCPFController } from '../../3-controller/add-cpf.controller';
 import { AddCPFUseCase } from '../../2-business/useCases/add-cpf.useCase';
 import { CpfRepository } from '../repositories/cpf.repository';
-import { CpfSchema } from '../models/cpf.model';
 import { MongoModule } from '../infrastructure/mongoDB';
+import { ValidCPFUseCase } from '../../2-business/useCases/valid-cpf.useCase';
+import { MongooseModule } from '@nestjs/mongoose';
+import { CpfSchema } from '../models/add-cpf.model';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { MongoModule } from '../infrastructure/mongoDB';
   controllers: [AddCPFController],
   providers: [
     AddCPFUseCase,
+    ValidCPFUseCase,
     {
       useClass: CpfRepository,
       provide: 'ICpfRepository',
