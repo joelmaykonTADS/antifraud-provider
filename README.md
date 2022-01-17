@@ -5,11 +5,15 @@
 </h1>
 <h2> Iniciando o projeto </h2>
 <p>
-  Para rodar o container docker: `npm run start:docker`
-  Antes de executar o serverless-framework possuir ele instalado
-  `npm install -g serverless`
-  Instalar as dependências usar o comando: `npm i` ou `yarn`
-  Para rodar o serverless offline: `npm run start:sls`
+  <li>Para rodar o container docker: <code>npm run start:docker</code></li>
+
+  <li>Antes de executar o serverless-framework possuir ele instalado
+  <code>npm install -g serverless</code></li>
+
+  <li>Instalar as dependências usar o comando: <code>npm i</code> ou <code>yarn</code></li>
+
+  <li>Para rodar o serverless offline: <code>npm run start:sls</code></li>
+
 </p>
 
 <p align="justify">
@@ -89,29 +93,29 @@ A plantaforma de desenvolvimento é em Node.js (Javascript/Typescript).
 <li>
   Uso de container <b> Docker </b> para ter o ambiente local pré-configurado similar ao ambiente produtivo.
 </li>
+<img src="./documentation/assets/arquitetura.png" alt="Bear Stone Smart Home" width="900" height="280">
+<h2>
+  Framework - Serverless e Nest JS
+</h2>
+A escolha de serviços serverless AWS é a melhor escolha para a  solução no nível de infraestrutura, principalmente por ter:
 
-<h2>
-  Motivos na escolha do framework
-</h2>
-<h2>
-  Motivos na escolha do banco de dados
-</h2>
-<h2>
-  Arquitetura Limpa  
-</h2>
+<li>Um custo no modelo de cobrança flexível e pago comforme o uso;</li>
 
-<h2>
-  Documentação - Swagger
-</h2>
+<li>Reduz as atividades de suporte operacional relacionadas a provisionamento, escala e segurança;</li>
 
+<li> Permite a escala automática e rápida para uso sob demanda.</li>
+
+<li>O projeto é baseado em <b>Serverless Framework</b> em <b>TypeScript</b> e <b>NodeJs</b> para implementação de funções <b>AWS Lambda</b>, usando os recursos do <b>Nest JS Framework</b>.</li>
+
+Anexo um desenho base para implementações serverless para o 
 <h2>
-  Notifier Service - Amazon SNS
+  Motivos na escolha do MongoDB
 </h2>
 <li>
-  O serviço de notificação da AWS será usado como um notificador via email para quando alguém testar os endpoints fazendo alguma request para nossos serviços.
+  Utilizando MongoDB temos uma melhor performance, visto que uma única consulta retorna tudo o que precisamos saber sobre o documento.
 </li>
-<h2>
-  Fluxo de implantação
-</h2>
+<li>
+  Traz escalabilidade, flexibilidade, desempenho e uma facilidade para as consultas.
+</li>
 
 ##### <a href="../README.md">Voltar para o Início</a>
