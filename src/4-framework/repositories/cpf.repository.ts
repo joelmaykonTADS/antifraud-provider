@@ -18,9 +18,10 @@ export class CpfRepository implements ICpfRepository {
   }
 
   public async save(cpf: InputCpfDto): Promise<OutputCpfDto> {
+    const date = new Date();
     const addCpf = new this.cpfModel({
       value: cpf.value,
-      createdAt: Date.now(),
+      createdAt: date.toISOString(),
     });
     return addCpf.save();
   }
