@@ -2,7 +2,6 @@ import { BadRequestException, NotFoundException } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { ValidCPFUseCase } from '../../../../src/2-business/useCases/valid-cpf.useCase';
 import { InputCpfDto } from '../../../../src/2-business/dto/cpf/input-cpf.dto';
-import { OutputCpfDto } from '../../../../src/2-business/dto/cpf/output-cpf.dto';
 import { CheckCPFUseCase } from '../../../../src/2-business/useCases/check-cpf.useCase';
 import { CpfRepository } from '../../../../src/4-framework/repositories/cpf.repository';
 import { Cpf } from '../../../../src/4-framework/models/cpf.model';

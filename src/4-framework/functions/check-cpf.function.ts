@@ -9,7 +9,7 @@ import { CheckCPFController } from '../../3-controller/check-cpf.controller';
 import { CheckCPFUseCase } from '../../2-business/useCases/check-cpf.useCase';
 import { ValidCPFUseCase } from '../../2-business/useCases/valid-cpf.useCase';
 import { MongooseModule } from '@nestjs/mongoose';
-import { CpfSchema } from '../models/add-cpf.model';
+import { CpfSchema } from '../models/cpf.model';
 
 @Module({
   imports: [

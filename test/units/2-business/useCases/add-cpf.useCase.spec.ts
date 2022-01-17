@@ -1,11 +1,11 @@
 import { BadRequestException } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { ValidCPFUseCase } from '../../../../src/2-business/useCases/valid-cpf.useCase';
-import { Cpf } from 'src/4-framework/models/cpf.model';
 import { InputCpfDto } from '../../../../src/2-business/dto/cpf/input-cpf.dto';
 import { OutputCpfDto } from '../../../../src/2-business/dto/cpf/output-cpf.dto';
 import { AddCPFUseCase } from '../../../../src/2-business/useCases/add-cpf.useCase';
 import { CpfRepository } from '../../../../src/4-framework/repositories/cpf.repository';
+import { Cpf } from 'src/4-framework/models/cpf.model';
 
 describe('CPF Add UseCase', () => {
   let useCase: AddCPFUseCase;
