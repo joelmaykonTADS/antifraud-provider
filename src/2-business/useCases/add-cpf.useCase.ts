@@ -23,7 +23,7 @@ export class AddCPFUseCase {
       const createdCpf = this._cpfRepository.save(cpf);
       return createdCpf;
     } catch (e) {
-      console.log('error useCase add cpf');
+      console.error('error useCase add cpf');
       return e;
     }
   }

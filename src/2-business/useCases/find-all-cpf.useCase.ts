@@ -13,7 +13,7 @@ export class FindAllCPFUseCase {
     try {
       return await this._cpfRepository.findAll();
     } catch (e) {
-      console.log('error useCase find all cpfs');
+      console.error('error useCase find all cpfs');
       return e;
     }
   }

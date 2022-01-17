@@ -22,7 +22,7 @@ export class RemoveCPFUseCase {
       this._validCpf.isNotExist(result);
       await this._cpfRepository.remove(cpf);
     } catch (e) {
-      console.log('error useCase remove cpf');
+      console.error('error useCase remove cpf');
       return e;
     }
   }
