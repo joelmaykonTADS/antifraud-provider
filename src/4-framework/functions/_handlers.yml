@@ -9,3 +9,14 @@ addCpf: # The name of the lambda function
             parameters:
               paths:
                 cpf: true
+checkCpf: # The name of the lambda function
+   # The module 'handler' is exported in the file 'src/4-framework/functions'
+   handler: src/4-framework/functions/check-cpf.function.handler
+   events:
+     - http:
+         method: get
+         path: /cpf/{cpf}
+         request:
+            parameters:
+              paths:
+                cpf: true
