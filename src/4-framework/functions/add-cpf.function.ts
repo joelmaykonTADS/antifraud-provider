@@ -19,7 +19,6 @@ import { MongoModule } from '../infrastructure/mongoDB';
   providers: [
     AddCPFUseCase,
     {
-      // You can switch useClass to different implementation
       useClass: CpfRepository,
       provide: 'ICpfRepository',
     },

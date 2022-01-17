@@ -11,7 +11,7 @@ export class AddCPFController {
   async run(@Param('cpf') cpf: string): Promise<OutputCpfDto> {
     const input = new InputCpfDto();
     input.value = cpf;
-    console.info(`init controller :: ${cpf}`);
+    console.info(`init controller :: add cpf: ${cpf}`);
     const output = await this.addCpf.run(input);
     console.info(`finished controller :: add cpf: ${JSON.stringify(output)}`);
     return output;
