@@ -4,4 +4,5 @@ import { OutputCpfDto } from '../dto/cpf/output-cpf.dto';
 export interface ICpfRepository {
   save(cpf: InputCpfDto): Promise<OutputCpfDto>;
   findOne(cpf: InputCpfDto): Promise<OutputCpfDto>;
+  remove(cpf: InputCpfDto): Promise<void>;
 }
