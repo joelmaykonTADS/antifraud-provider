@@ -7,7 +7,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AddCPFController } from '../../3-controller/add-cpf.controller';
 import { AddCPFUseCase } from '../../2-business/useCases/add-cpf.useCase';
 import { CpfRepository } from '../repositories/cpf.repository';
-import { CpfSchema } from '../models/add-cpf.model';
+import { CpfSchema } from '../models/cpf.model';
 import { MongoModule } from '../infrastructure/mongoDB';
 
 @Module({
