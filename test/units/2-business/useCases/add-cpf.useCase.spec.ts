@@ -5,7 +5,7 @@ import { InputCpfDto } from '../../../../src/2-business/dto/cpf/input-cpf.dto';
 import { OutputCpfDto } from '../../../../src/2-business/dto/cpf/output-cpf.dto';
 import { AddCPFUseCase } from '../../../../src/2-business/useCases/add-cpf.useCase';
 import { CpfRepository } from '../../../../src/4-framework/repositories/cpf.repository';
-import { Cpf } from 'src/4-framework/models/cpf.model';
+import { Cpf } from '../../../../src/4-framework/models/cpf.model';
 
 describe('CPF Add UseCase', () => {
   let useCase: AddCPFUseCase;
@@ -59,6 +59,14 @@ describe('CPF Add UseCase', () => {
     expect(
       await useCase.run({
         value: '111.111.111-11',
+      } as InputCpfDto),
+    ).toBeInstanceOf(BadRequestException);
+  });
+
+  test('Try add CPF error, numbers invalid of digits', async () => {
+    expect(
+      await useCase.run({
+        value: '111.111.111-1',
       } as InputCpfDto),
     ).toBeInstanceOf(BadRequestException);
   });

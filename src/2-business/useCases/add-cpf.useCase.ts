@@ -16,10 +16,10 @@ export class AddCPFUseCase {
     const cpf = new OutputCpfDto();
     try {
       cpf.value = this._validCpf.formatted(input);
-      const result = await this._cpfRepository.findOne(cpf);
-      this._validCpf.isExist(result);
       this._validCpf.isRepeatedNumber(cpf);
       this._validCpf.isNotQuantityDigits(cpf);
+      const result = await this._cpfRepository.findOne(cpf);
+      this._validCpf.isExist(result);
       const createdCpf = this._cpfRepository.save(cpf);
       return createdCpf;
     } catch (e) {
