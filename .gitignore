@@ -141,3 +141,5 @@ lerna-debug.log*
 
 data
 .build
+
+.VSCodeCounter
