@@ -31,3 +31,10 @@ removeCpf: # The name of the lambda function
             parameters:
               paths:
                 cpf: true
+findAllCpf: # The name of the lambda function
+   # The module 'handler' is exported in the file 'src/4-framework/functions'
+   handler: src/4-framework/functions/find-all-cpf.function.handler
+   events:
+     - http:
+         method: get
+         path: /cpf/

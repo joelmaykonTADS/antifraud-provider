@@ -1,5 +1,5 @@
 import { Controller, Param, Delete } from '@nestjs/common';
-import { RemoveCPFUseCase } from '../../src/2-business/useCases/remove-cpf.useCase';
+import { RemoveCPFUseCase } from '../2-business/useCases/remove-cpf.useCase';
 import { InputCpfDto } from '../2-business/dto/cpf/input-cpf.dto';
 
 @Controller('cpf')
