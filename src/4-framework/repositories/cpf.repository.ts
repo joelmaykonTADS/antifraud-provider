@@ -9,6 +9,14 @@ import { Cpf } from '../models/cpf.model';
 @Injectable()
 export class CpfRepository implements ICpfRepository {
   constructor(@InjectModel('Cpf') private readonly cpfModel: Model<Cpf>) {}
+  async remove(cpf: InputCpfDto): Promise<void> {
+    await this.cpfModel
+      .deleteOne({
+        value: cpf.value,
+      })
+      .exec();
+  }
+
   public async findOne(cpf: InputCpfDto): Promise<OutputCpfDto> {
     return await this.cpfModel
       .findOne({
