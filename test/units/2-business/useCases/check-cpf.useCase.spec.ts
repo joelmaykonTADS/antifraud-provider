@@ -35,7 +35,7 @@ describe('CPF Check UseCase', () => {
     ).toEqual(result);
   });
 
-  test('Try add CPF, error cpf exist', async () => {
+  test('Try check CPF, error cpf not exist', async () => {
     jest.spyOn(repository, 'findOne').mockResolvedValue(null);
     expect(
       await useCase.run({
@@ -44,7 +44,7 @@ describe('CPF Check UseCase', () => {
     ).toBeInstanceOf(NotFoundException);
   });
 
-  test('Try add CPF error, repeat numbers', async () => {
+  test('Try check CPF error, repeat numbers', async () => {
     expect(
       await useCase.run({
         value: '111.111.111-11',

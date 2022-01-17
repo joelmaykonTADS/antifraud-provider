@@ -22,7 +22,7 @@ export class CheckCPFUseCase {
       this._validCpf.isNotExist(result);
       return result;
     } catch (e) {
-      console.log('error useCase Check cpf');
+      console.log('error useCase check cpf');
       return e;
     }
   }
