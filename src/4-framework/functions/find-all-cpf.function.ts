@@ -8,8 +8,8 @@ import { MongoModule } from '../infrastructure/mongoDB';
 import { ValidCPFUseCase } from '../../2-business/useCases/valid-cpf.useCase';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CpfSchema } from '../models/cpf.model';
-import { FindAllCPFController } from 'src/3-controller/find-all-cpf.controller';
-import { FindAllCPFUseCase } from 'src/2-business/useCases/find-all-cpf.useCase';
+import { FindAllCPFController } from '../../3-controller/find-all-cpf.controller';
+import { FindAllCPFUseCase } from '../../2-business/useCases/find-all-cpf.useCase';
 
 @Module({
   imports: [

@@ -1,7 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
-import { InputCpfDto } from '../2-business/dto/cpf/input-cpf.dto';
-import { FindAllCPFUseCase } from 'src/2-business/useCases/find-all-cpf.useCase';
-import { OutputCpfDto } from 'src/2-business/dto/cpf/output-cpf.dto';
+import { FindAllCPFUseCase } from '../2-business/useCases/find-all-cpf.useCase';
+import { OutputCpfDto } from '../2-business/dto/cpf/output-cpf.dto';
 
 @Controller('cpf')
 export class FindAllCPFController {
