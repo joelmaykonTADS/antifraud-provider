@@ -1,20 +1,22 @@
 import { BadRequestException } from '@nestjs/common';
 import { Model } from 'mongoose';
-import { NotFoundError } from 'rxjs';
-import { Cpf } from 'src/4-framework/models/add-cpf.model';
+import { ValidCPFUseCase } from '../../../../src/2-business/useCases/valid-cpf.useCase';
+import { Cpf } from 'src/4-framework/models/cpf.model';
 import { InputCpfDto } from '../../../../src/2-business/dto/cpf/input-cpf.dto';
 import { OutputCpfDto } from '../../../../src/2-business/dto/cpf/output-cpf.dto';
 import { AddCPFUseCase } from '../../../../src/2-business/useCases/add-cpf.useCase';
 import { CpfRepository } from '../../../../src/4-framework/repositories/cpf.repository';
 
-describe('CPF UseCase', () => {
+describe('CPF Add UseCase', () => {
   let useCase: AddCPFUseCase;
   let repository: CpfRepository;
   let cpfModel: Model<Cpf>;
+  let valid: ValidCPFUseCase;
 
   beforeEach(async () => {
     repository = new CpfRepository(cpfModel);
-    useCase = new AddCPFUseCase(repository);
+    valid = new ValidCPFUseCase();
+    useCase = new AddCPFUseCase(repository, valid);
   });
 
   test('Add CPF success', async () => {
@@ -51,12 +53,12 @@ describe('CPF UseCase', () => {
   test('Try add CPF error, repeat numbers', async () => {
     const date = new Date();
     jest.spyOn(repository, 'findOne').mockResolvedValue({
-      value: '00954817029',
+      value: '11111111111',
       createdAt: date,
     } as OutputCpfDto);
     expect(
       await useCase.run({
-        value: '009.548.170-29',
+        value: '111.111.111-11',
       } as InputCpfDto),
     ).toBeInstanceOf(BadRequestException);
   });
