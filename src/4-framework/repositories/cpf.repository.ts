@@ -9,6 +9,14 @@ import { Cpf } from '../models/add-cpf.model';
 @Injectable()
 export class CpfRepository implements ICpfRepository {
   constructor(@InjectModel('Cpf') private readonly cpfModel: Model<Cpf>) {}
+  public async findOne(cpf: InputCpfDto): Promise<OutputCpfDto> {
+    return await this.cpfModel
+      .findOne({
+        value: cpf.value,
+      })
+      .exec();
+  }
+
   public async save(cpf: InputCpfDto): Promise<OutputCpfDto> {
     const addCpf = new this.cpfModel({
       value: cpf.value,
