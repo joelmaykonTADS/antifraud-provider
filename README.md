@@ -109,13 +109,13 @@ A escolha de serviços serverless AWS é a melhor escolha para a  solução no n
 
 Anexo um desenho base para implementações serverless para o 
 <h2>
-  Motivos na escolha do MongoDB
+  Banco de dados - MongoDB
 </h2>
 <li>
   Utilizando MongoDB temos uma melhor performance, visto que uma única consulta retorna tudo o que precisamos saber sobre o documento.
 </li>
 <li>
-  Traz escalabilidade, flexibilidade, desempenho e uma facilidade para as consultas.
+  Traz escalabilidade, flexibilidade, desempenho e facilidade para as consultas.
 </li>
 
 ##### <a href="../README.md">Voltar para o Início</a>
