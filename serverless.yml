@@ -1,5 +1,5 @@
 service:
- name: ccb-core
+ name: antifraud-provider
 
 plugins:
  - 'serverless-plugin-typescript'

@@ -5,7 +5,7 @@ import { ICpfRepository } from '../repositories/cpf.respository.interfaces';
 import { ValidCPFUseCase } from './valid-cpf.useCase';
 
 @Injectable()
-export class AddCPFUseCase {
+export class CheckCPFUseCase {
   constructor(
     @Inject('ICpfRepository')
     private readonly _cpfRepository: ICpfRepository,
@@ -16,14 +16,13 @@ export class AddCPFUseCase {
     const cpf = new OutputCpfDto();
     try {
       cpf.value = this._validCpf.formatted(input);
-      const result = await this._cpfRepository.findOne(cpf);
-      this._validCpf.isExist(result);
       this._validCpf.isRepeatedNumber(cpf);
       this._validCpf.isNotQuantityDigits(cpf);
-      const createdCpf = this._cpfRepository.save(cpf);
-      return createdCpf;
+      const result = await this._cpfRepository.findOne(cpf);
+      this._validCpf.isNotExist(result);
+      return result;
     } catch (e) {
-      console.log('error useCase add cpf');
+      console.log('error useCase Check cpf');
       return e;
     }
   }

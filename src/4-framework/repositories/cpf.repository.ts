@@ -4,7 +4,7 @@ import { OutputCpfDto } from 'src/2-business/dto/cpf/output-cpf.dto';
 import { ICpfRepository } from 'src/2-business/repositories/cpf.respository.interfaces';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Cpf } from '../models/add-cpf.model';
+import { Cpf } from '../models/cpf.model';
 
 @Injectable()
 export class CpfRepository implements ICpfRepository {
