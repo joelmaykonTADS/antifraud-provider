@@ -120,4 +120,4 @@ Anexo um desenho base para implementações serverless para o
 
 <h2> Organização da arquitetura - clean architecture </h2>
 <img src="./documentation/assets/clean-architecture.png"/>
-##### <a href="../README.md">Voltar para o Início</a>
+<a href="../README.md">Voltar para o Início</a>
