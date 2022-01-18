@@ -1,5 +1,6 @@
 service:
  name: antifraud-provider
+ frameworkVersion: '2'
 
 plugins:
  - 'serverless-plugin-typescript'

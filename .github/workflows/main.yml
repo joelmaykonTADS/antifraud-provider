@@ -6,27 +6,28 @@ on:
     branches:
       - master
 
-# Specify what jobs to run
 jobs:
-  deploy:
-    name: deploy
-    runs-on: ubuntu-latest 
-    env: #Setup environmental variables for serverless deployment
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
+  serverless-deploy-production:
+    runs-on: ubuntu-latest
     steps:
-      # Use github defaut action to trigger action in this repo. Mandatory
-      # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow#using-the-checkout-action
-      - uses: actions/checkout@v2 
-
-      - name: remove aws-sdk
-        run: npm uninstall aws-sdk
-      
-      - name: npm install dependencies
-        run: npm install
-        
-      - name: Serverless
-        uses: serverless/github-action@master
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with: 
+          node-version: 12
+      - name: Install serverless CLI
+        run: npm install -g serverless
+      - name: Install npm dependencies
+        run: npm install 
+      - name: set environment variables
+        run: |
+          touch .env
+          echo "API_KEY=${{secrets.API_KEY}}" >> .env
+      - name: Configure AWS credentials for account with session token
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          args: deploy
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}
+          aws-region: us-east-1
+      - name: deploy
+        run: serverless deploy --stage production
