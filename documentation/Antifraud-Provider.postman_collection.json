@@ -1,0 +1,364 @@
+{
+	"info": {
+		"_postman_id": "1791755d-cdb6-47bd-b861-db7679a4dbe2",
+		"name": "Antifraud-Provider",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Heroku",
+			"item": [
+				{
+					"name": "Add CPF",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url-heroku}}/cpf/009.548.170-33",
+							"host": [
+								"{{url-heroku}}"
+							],
+							"path": [
+								"cpf",
+								"009.548.170-33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add CPF - minimal number",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url-heroku}}/cpf/009.548.170-3",
+							"host": [
+								"{{url-heroku}}"
+							],
+							"path": [
+								"cpf",
+								"009.548.170-3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add CPF -  max number",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url-heroku}}/cpf/009.548.170-333",
+							"host": [
+								"{{url-heroku}}"
+							],
+							"path": [
+								"cpf",
+								"009.548.170-333"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add CPF - repeat numbers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url-heroku}}/cpf/111.111.111-11",
+							"host": [
+								"{{url-heroku}}"
+							],
+							"path": [
+								"cpf",
+								"111.111.111-11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check CPF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-heroku}}/cpf/009.548.170-33",
+							"host": [
+								"{{url-heroku}}"
+							],
+							"path": [
+								"cpf",
+								"009.548.170-33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove CPF",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url-heroku}}/cpf/009.548.170-33",
+							"host": [
+								"{{url-heroku}}"
+							],
+							"path": [
+								"cpf",
+								"009.548.170-33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All CPF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-heroku}}/cpf",
+							"host": [
+								"{{url-heroku}}"
+							],
+							"path": [
+								"cpf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Nest JS",
+			"item": [
+				{
+					"name": "Add CPF",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cpf/009.548.170-33",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cpf",
+								"009.548.170-33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add CPF - minimal number",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cpf/009.548.170-3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cpf",
+								"009.548.170-3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add CPF - repeat numbers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cpf/111.111.111-11",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cpf",
+								"111.111.111-11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add CPF - max number",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cpf/009.548.170-333",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cpf",
+								"009.548.170-333"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check CPF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cpf/009.548.170-33",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cpf",
+								"009.548.170-33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove CPF",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cpf/009.548.170-33",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cpf",
+								"009.548.170-33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All CPF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cpf",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cpf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Docker",
+			"item": [
+				{
+					"name": "Add CPF",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url-docker}}/cpf/009.548.170-33",
+							"host": [
+								"{{url-docker}}"
+							],
+							"path": [
+								"cpf",
+								"009.548.170-33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add CPF - minimal number",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url-docker}}/cpf/009.548.170-3",
+							"host": [
+								"{{url-docker}}"
+							],
+							"path": [
+								"cpf",
+								"009.548.170-3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add CPF - repeat numbers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url-docker}}/cpf/111.111.111-11",
+							"host": [
+								"{{url-docker}}"
+							],
+							"path": [
+								"cpf",
+								"111.111.111-11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add CPF - max number",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url-docker}}/cpf/009.548.170-333",
+							"host": [
+								"{{url-docker}}"
+							],
+							"path": [
+								"cpf",
+								"009.548.170-333"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check CPF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-docker}}/cpf/009.548.170-33",
+							"host": [
+								"{{url-docker}}"
+							],
+							"path": [
+								"cpf",
+								"009.548.170-33"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

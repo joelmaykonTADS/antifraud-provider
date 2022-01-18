@@ -6,16 +6,12 @@
 <h2> Iniciando o projeto </h2>
 <p>
   <li>Para rodar o container docker: <code>npm run start:docker</code></li>
-
-  <li>Antes de executar o serverless-framework possuir ele instalado
-  <code>npm install -g serverless</code></li>
-
-  <li>Instalar as dependências usar o comando: <code>npm i</code> ou <code>yarn</code></li>
-
-  <li>Para rodar o serverless offline: <code>npm run start:sls</code></li>
-
+  <li> Execução localmente: <code>npm i</code> e <code>npm start</code>
 </p>
-
+<h2>Como testar os endpoints</h2>
+<li>
+Arquivo de requests e ambiente para testar os endpoint na ferramenta postman:
+<a href="documentation/Antifraud-Provider.postman_collection.json">Collection Postman</a> - <a href="documentation/CPF.postman_environment.json">Environment CPF</a></li>
 <p align="justify">
   The <b> Antifraud Provider </b>is a set of definitions to help you integrate your team consume our <b> services of API</b> with maximum agility. 
 
@@ -93,30 +89,12 @@ A plantaforma de desenvolvimento é em Node.js (Javascript/Typescript).
 <li>
   Uso de container <b> Docker </b> para ter o ambiente local pré-configurado similar ao ambiente produtivo.
 </li>
-<img src="./documentation/assets/arquitetura.png" alt="Bear Stone Smart Home" width="900" height="280">
+<img src="./documentation/assets/arquitetura.png" alt="" width="900" height="280">
 <h2>
-  Framework - Serverless e Nest JS
+  Framework Nest JS
 </h2>
-A escolha de serviços serverless AWS é a melhor escolha para a  solução no nível de infraestrutura, principalmente por ter:
 
-<li>Um custo no modelo de cobrança flexível e pago comforme o uso;</li>
 
-<li>Reduz as atividades de suporte operacional relacionadas a provisionamento, escala e segurança;</li>
-
-<li> Permite a escala automática e rápida para uso sob demanda.</li>
-
-<li>O projeto é baseado em <b>Serverless Framework</b> em <b>TypeScript</b> e <b>NodeJs</b> para implementação de funções <b>AWS Lambda</b>, usando os recursos do <b>Nest JS Framework</b>.</li>
-
-Anexo um desenho base para implementações serverless para o 
-<h2>
-  Banco de dados - MongoDB
-</h2>
-<li>
-  Utilizando MongoDB temos uma melhor performance, visto que uma única consulta retorna tudo o que precisamos saber sobre o documento.
-</li>
-<li>
-  Traz escalabilidade, flexibilidade, desempenho e facilidade para as consultas.
-</li>
 
 <h2> Organização da arquitetura - clean architecture </h2>
 <img src="./documentation/assets/clean-architecture.png"/>
