@@ -13,7 +13,7 @@ package:
   individually: true
 
 custom:
-  funcDir: src/4-framework/functions
+  funcDir: ./src/4-framework/functions
 
 functions:
   - ${file(${self:custom.funcDir}/_handlers.yml)}
