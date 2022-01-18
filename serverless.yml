@@ -9,9 +9,6 @@ provider:
  name: aws
  runtime: nodejs14.x
  
-package:
-  individually: true
-
 custom:
   funcDir: src/4-framework/functions
 
