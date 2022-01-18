@@ -1,6 +1,5 @@
 service:
  name: antifraud-provider
- frameworkVersion: '2'
 
 plugins:
  - 'serverless-plugin-typescript'
@@ -14,7 +13,7 @@ package:
   individually: true
 
 custom:
-  funcDir: ./src/4-framework/functions
+  funcDir: src/4-framework/functions
 
 functions:
   - ${file(${self:custom.funcDir}/_handlers.yml)}
