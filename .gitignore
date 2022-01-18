@@ -143,3 +143,4 @@ data
 .build/
 
 .VSCodeCounter
+/dist
