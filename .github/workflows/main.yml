@@ -18,12 +18,12 @@ jobs:
     steps:
       # Use github defaut action to trigger action in this repo. Mandatory
       # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow#using-the-checkout-action
-      - uses: actions/checkout@v1 
+      - uses: actions/checkout@v2 
 
       - name: npm install dependencies
         run: npm install
         
       - name: Serverless
-        uses: serverless/github-action@v1.53.0
+        uses: serverless/github-action@master
         with:
           args: deploy
