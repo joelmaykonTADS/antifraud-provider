@@ -20,6 +20,9 @@ jobs:
       # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow#using-the-checkout-action
       - uses: actions/checkout@v2 
 
+      - name: remove aws-sdk
+      - run: npm uninstall aws-sdk
+      
       - name: npm install dependencies
         run: npm install
         
