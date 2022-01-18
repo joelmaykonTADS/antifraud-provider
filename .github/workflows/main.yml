@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v2 
 
       - name: remove aws-sdk
-      - run: npm uninstall aws-sdk
+        run: npm uninstall aws-sdk
       
       - name: npm install dependencies
         run: npm install
