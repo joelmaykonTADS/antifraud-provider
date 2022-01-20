@@ -1,0 +1,59 @@
+service:
+ name: antifraud-provider
+
+plugins:
+ - 'serverless-plugin-typescript'
+ - serverless-offline
+
+provider:
+ name: aws
+ runtime: nodejs14.x
+
+package:
+  individually: true
+
+custom:
+  funcDir: src/4-framework/functions
+
+functions:
+  add-cpf: # The name of the lambda function
+   # The module 'handler' is exported in the file 'src/lambda'
+   handler: src/4-framework/functions/add-cpf.function.handler
+   events:
+     - http:
+         method: post
+         path: /cpf/{cpf}
+         request:
+            parameters:
+              paths:
+                cpf: true
+  check-cpf: # The name of the lambda function
+    # The module 'handler' is exported in the file 'src/4-framework/functions'
+    handler: src/4-framework/functions/check-cpf.function.handler
+    events:
+      - http:
+          method: get
+          path: /cpf/{cpf}
+          request:
+              parameters:
+                paths:
+                  cpf: true
+  remove-cpf: # The name of the lambda function
+    # The module 'handler' is exported in the file 'src/4-framework/functions'
+    handler: src/4-framework/functions/remove-cpf.function.handler
+    events:
+      - http:
+          method: delete
+          path: /cpf/{cpf}
+          request:
+              parameters:
+                paths:
+                  cpf: true
+  find-all-pf: # The name of the lambda function
+    # The module 'handler' is exported in the file 'src/4-framework/functions'
+    handler: src/4-framework/functions/find-all-cpf.function.handler
+    events:
+      - http:
+          method: get
+          path: /cpf
+
