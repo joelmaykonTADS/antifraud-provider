@@ -1,5 +1,5 @@
-#User Story 2 (US2)
-##Verificar se um determinado CPF está na lista restrita
+# User Story 2 (US2)
+## Verificar se um determinado CPF está na lista restrita
 
 **Eu** como um usuário de **API** e Product Owner, quero verificar se um CPF esta na lista restrita.
 
